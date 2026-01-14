@@ -1,0 +1,42 @@
+uppgift
+Skapa en egen portfoliowebbplats som hämtar sin data från ett Headless CMS. Webbplatsen
+ska renderas med SSG (Static Site Generation)-teknik. Andra tekniska lösningar är möjliga vid
+önskemål; stäm av med utbildaren vid intresse. Innehållet i Headless CMS-lösningen ska vara
+möjligt att administrera från ett eller flera administrationsgränssnitt, såsom Contentful.
+
+
+Portfoliowebbplatsen ska bestå av minst:
+○ Startsida: Minst rubrik, presentationstext och en bild ska renderas dynamiskt.
+○ Projektöversiktssida: Minst titel, beskrivning, bild och länk ska finnas för varje
+portfolio-objekt. Minst 5 objekt krävs.
+○ Enskild projektsida: Dynamiskt genererade sidor med minst samma innehåll
+som i projektöversikten.
+○ Om mig-sida: Minst titel, beskrivning och bild.
+○ Kontaktsida: Kontaktuppgifter (t.ex. e-post och länkar till Github, LinkedIn, etc.)
+ska renderas dynamiskt.
+○ 404-sida: Med lämpligt felmeddelande och länk till startsidan.
+2. En navigation av något slag ska dynamiskt implementeras med länkar till webbplatsens
+olika sidor.
+3. Headless CMS-lösningen ska innehålla minst 3 olika innehållstyper (Content Types) med
+minst 3 fält (fields) i varje.
+4. Bilder på webbplatsen ska vara optimerade för rimliga storlekar och format.
+5. Headless CMS-lösningen ska vara åtkomlig online via inloggning.
+6. Webbplatsen ska publiceras på en publik webbserver och uppdateras automatiskt vid
+förändringar i CMS.
+
+
+Förbered en redovisning med:
+1. Översikt av lösningen och webbplatsens delar.
+2. Valda tekniker och användning av Headless CMS.
+3. Beskrivning av SSG-teknik eller annan lösning.
+4. Bildformat och grafikoptimering.
+5. Åtgärder för SEO.
+6. Alternativa tekniklösningar.
+7. Jämförelse mellan traditionellt och Headless CMS.
+8. Nu när ni har erfarenhet av fler CMS, när skulle ni säga att det är lämpligt att använda
+vilket?
+Inlämning
+● Muntlig redovisning: En muntlig redovisning den 15 januari 2026
+● Format: Källkoden för projektet (hela er projektmapp) (ej node_modules) i ZIP-format
+som laddas upp på ITHS-distans.
+Stort lycka till!
