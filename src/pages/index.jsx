@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { renderRichText } from "@contentful/rich-text-react-renderer"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import ProjectCard from "../components/ProjectCard"
@@ -15,7 +15,7 @@ const HomePage = ({ data }) => {
     <Layout>
       <SEO 
         title="Home" 
-        description={home?.seoDescription || "Welcome to my portfolio"} 
+        description={home?.seoDescription?.seoDescription || "Welcome to my portfolio"} 
       />
       
       {/* Hero Section */}
@@ -121,17 +121,17 @@ export const query = graphql`
           formats: [AUTO, WEBP, AVIF]
         )
       }
-      seoDescription
+      seoDescription {
+        seoDescription
+      }
     }
     allContentfulProject(
-      filter: { featured: { eq: true } }
       sort: { createdAt: DESC }
       limit: 3
     ) {
       nodes {
         title
         slug
-        technologies
         featured
         image {
           gatsbyImageData(

@@ -65,7 +65,6 @@ export const query = graphql`
       nodes {
         title
         slug
-        technologies
         featured
         image {
           gatsbyImageData(

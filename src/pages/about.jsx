@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { renderRichText } from "@contentful/rich-text-react-renderer"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
@@ -61,33 +61,8 @@ const AboutPage = ({ data }) => {
         </div>
       </section>
 
-      {/* Skills Section */}
-      {about?.skills && about.skills.length > 0 && (
-        <section className="section-padding bg-dark-900/30">
-          <div className="container-custom">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-dark-50">
-                Skills & <span className="gradient-text">Technologies</span>
-              </h2>
-              <p className="mt-4 text-dark-400 max-w-2xl mx-auto">
-                Technologies and tools I work with to bring ideas to life.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-              {about.skills.map((skill, index) => (
-                <div
-                  key={skill}
-                  className="px-6 py-3 bg-dark-800/50 border border-dark-700 rounded-xl text-dark-200 font-medium hover:border-primary-500/50 hover:text-primary-500 transition-all duration-300 animate-slide-up"
-                  style={{ animationDelay: `${index * 50}ms` }}
-                >
-                  {skill}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      {/* Skills Section - Hidden until skills field has data */}
+      {/* Skills will appear here when added to Contentful */}
 
       {/* CTA Section */}
       <section className="section-padding">
@@ -128,7 +103,6 @@ export const query = graphql`
           formats: [AUTO, WEBP, AVIF]
         )
       }
-      skills
     }
   }
 `

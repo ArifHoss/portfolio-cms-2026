@@ -46,19 +46,7 @@ const ProjectCard = ({ project, index = 0 }) => {
             {project.title}
           </h3>
           
-          {/* Technologies */}
-          {project.technologies && project.technologies.length > 0 && (
-            <div className="flex flex-wrap gap-2 mt-3">
-              {project.technologies.slice(0, 4).map((tech) => (
-                <span
-                  key={tech}
-                  className="px-2 py-1 bg-dark-800 text-dark-300 text-xs rounded-md"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          )}
+          {/* Technologies - will appear when added to Contentful */}
 
           {/* Arrow indicator */}
           <div className="mt-4 flex items-center text-primary-500 font-medium">

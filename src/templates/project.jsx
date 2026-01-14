@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { renderRichText } from "@contentful/rich-text-react-renderer"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS, INLINES } from "@contentful/rich-text-types"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
@@ -122,19 +122,7 @@ const ProjectTemplate = ({ data }) => {
                 {project.title}
               </h1>
 
-              {/* Technologies */}
-              {project.technologies && project.technologies.length > 0 && (
-                <div className="flex flex-wrap gap-2 mt-6">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-4 py-2 bg-dark-800 text-dark-300 text-sm rounded-lg border border-dark-700"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              )}
+              {/* Technologies - will appear when added to Contentful */}
 
               {/* Project URL */}
               {project.projectUrl && (
@@ -218,7 +206,6 @@ export const query = graphql`
         )
       }
       projectUrl
-      technologies
       featured
     }
   }
